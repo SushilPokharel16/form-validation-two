@@ -8,47 +8,49 @@ $(document).ready(function(){
 
 
   $("#my_form").submit(function(){
-    if($("#name_").val()== '' && $("#email_").val() == '' &&
-   $("#password_").val() == ''&& $("#rpassword_").val() == ''&&
-    $("#number_").val() == '' &&
-    $("#cemployer_").val() == '' && $("#cemployerAdd_").val() == '' &&
-    $("#pemployer_").val() == '' && $("#pemployerAdd_").val() == ''){
-        // alert($(".error").show());
-        $("#name_error").show();
+  //   if($("#name_").val()== '' && $("#email_").val() == '' &&
+  //  $("#password_").val() == ''&& $("#rpassword_").val() == ''&&
+  //   $("#number_").val() == '' &&
+  //   $("#cemployer_").val() == '' && $("#cemployerAdd_").val() == '' &&
+  //   $("#pemployer_").val() == '' && $("#pemployerAdd_").val() == ''){
+  //       alert('hey');
+  //       $("#name_error").show();
+  //       $("#email_error").show();
+  //       $("#password_error").show();
+  //       $("#rpassword_error").show();
+  //       $("#number_error").show();
+  //       $("#cemployer_error").show();
+  //       $("#cemployerAdd_error").show();
+  //       $("#pemployer_error").show();
+  //       $("#pemployerAdd_error").show();
+  //       $("#pemployer_error").show();
+  //       $("#pemployer_error").show();
+  //       $("#pemployer_error").show();
+  //     //  return false;
+    // }
+     if ($("#email_error").val()== '' && $("#password_error").val()== ''){
+        $("#name_error").hide();
         $("#email_error").show();
         $("#password_error").show();
-        $("#rpassword_error").show();
-        $("#number_error").show();
-        $("#cemployer_error").show();
-        $("#cemployerAdd_error").show();
-        $("#pemployer_error").show();
-        $("#pemployerAdd_error").show();
-        $("#pemployer_error").show();
-        $("#pemployer_error").show();
-        $("#pemployer_error").show();
-       return false;
-    }
-    // else{
-    //   $("#name_error").hide();
-    //   $("#email_error").hide();
-    //   $("#password_error").hide();
-    //   $("#rpassword_error").hide();
-    //   $("#number_error").hide();
-    //   $("#cemployer_error").hide();
-    //   $("#cemployerAdd_error").hide();
-    //   $("#pemployer_error").hide();
-    //   $("#pemployerAdd_error").hide();
-    //   $("#pemployer_error").hide();
-    //   $("#pemployer_error").hide();
-    //   $("#pemployer_error").hide();
-    //
-    // }
+      }
+      else if($("#name_error").val()== ''&& $("#password_error").val()== ''){
+        $("#name_error").show();
+        $("#email_error").hide();
+        $("#password_error").show();
+      }
+      else if($("#name_error").val()== ''&&($("#email_error").val())== ''){
+        $("#name_error").show();
+        $("#email_error").show();
+        $("#password_error").hide();
+      }
+      // else{
+      //   $("#name_error").hide();
+      //   $("#email_error").hide();
+      //   $("#password_error").hide();
+      // }
 
 
-
-
-
-  });
+   });
   $("#date").datepicker({
     format:('mm-dd-yyyy'),
     endDate:' 01-01-1993'

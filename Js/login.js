@@ -1,18 +1,22 @@
 $(document).ready(function(){
-$("#my_form").submit(function(){
-  if($("email_").val()== '' && $("password_").val()== ''){
-    $("#email_error").show();
-    $("#password_error").show();
-  }
-  else if($("password_").val()== ''){
-        $("#email_error").hide();
-        $("#password_error").show();
-  }
-  else if($("email_").val()== ''){
-        $("#email_error").show();
-        $("#password_error").hide();
-  }
+  $(".error").hide();
+  $("#my_form").submit(function(){
+    if($("#email1_").val()== '' && $("#password1_").val()== ''){
+      alert("hello");
+      $("#email1_error").show();
+      $("#password1_error").show();
+      return false;
+    }
+    else if($("#email1_").val()== ''){
+        $("#email1_error").show();
+        $("#password1_error").hide();
+        return false;
+    }
 
-
-});
+    else if($("#password1_").val()== ''){
+        $("#email1_error").hide();
+        $("#password1_error").show();
+        return false;
+    }
+  });
 });

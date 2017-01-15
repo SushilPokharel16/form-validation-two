@@ -8,40 +8,43 @@ $(document).ready(function(){
 
 
   $("#my_form").submit(function(){
-  //   if($("#name_").val()== '' && $("#email_").val() == '' &&
-  //  $("#password_").val() == ''&& $("#rpassword_").val() == ''&&
-  //   $("#number_").val() == '' &&
-  //   $("#cemployer_").val() == '' && $("#cemployerAdd_").val() == '' &&
-  //   $("#pemployer_").val() == '' && $("#pemployerAdd_").val() == ''){
-  //       alert('hey');
-  //       $("#name_error").show();
-  //       $("#email_error").show();
-  //       $("#password_error").show();
-  //       $("#rpassword_error").show();
-  //       $("#number_error").show();
-  //       $("#cemployer_error").show();
-  //       $("#cemployerAdd_error").show();
-  //       $("#pemployer_error").show();
-  //       $("#pemployerAdd_error").show();
-  //       $("#pemployer_error").show();
-  //       $("#pemployer_error").show();
-  //       $("#pemployer_error").show();
-  //     //  return false;
-    // }
-     if ($("#email_error").val()== '' && $("#password_error").val()== ''){
+    if($("#name_").val()== '' && $("#email_").val() == '' &&
+   $("#password_").val() == ''&& $("#rpassword_").val() == ''&&
+    $("#number_").val() == '' &&
+    $("#cemployer_").val() == '' && $("#cemployerAdd_").val() == '' &&
+    $("#pemployer_").val() == '' && $("#pemployerAdd_").val() == ''){
+        alert('hey');
+        $("#name_error").show();
+        $("#email_error").show();
+        $("#password_error").show();
+        $("#rpassword_error").show();
+        $("#number_error").show();
+        $("#cemployer_error").show();
+        $("#cemployerAdd_error").show();
+        $("#pemployer_error").show();
+        $("#pemployerAdd_error").show();
+        $("#pemployer_error").show();
+        $("#pemployer_error").show();
+        $("#pemployer_error").show();
+        return false;
+    }
+     if ($("#email_").val()== '' && $("#password_").val()== ''){
         $("#name_error").hide();
         $("#email_error").show();
         $("#password_error").show();
+        return false;
       }
-      else if($("#name_error").val()== ''&& $("#password_error").val()== ''){
+      else if($("#name_").val()== ''&& $("#password_").val()== ''){
         $("#name_error").show();
         $("#email_error").hide();
         $("#password_error").show();
+        return false;
       }
-      else if($("#name_error").val()== ''&&($("#email_error").val())== ''){
+      else if($("#name_").val()== ''&&($("#email_").val())== ''){
         $("#name_error").show();
         $("#email_error").show();
         $("#password_error").hide();
+        return false;
       }
       // else{
       //   $("#name_error").hide();
